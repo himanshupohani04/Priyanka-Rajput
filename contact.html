@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Priyanka Rajput</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fffbea;
+      color: #222;
+    }
+
+    /* ===== NAVBAR STYLES (UPDATED) ===== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text .name {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .logo-text .title {
+      font-size: 12px;
+      color: #fdb714;
+      font-weight: 500;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-center li a {
+      font-weight: 500;
+      font-size: 16px;
+      color: #000;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .nav-center li a.active {
+      color: #fdb714;
+      border-bottom: 2px solid #fdb714;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-right a {
+      color: #000;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-right a:hover {
+      color: #fdb714;
+    }
+
+    /* ===== EXISTING STYLES BELOW ===== */
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+    }
+
+    .contact-box {
+      background: white;
+      border-radius: 16px;
+      padding: 3rem;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid #eee;
+      transform: translateY(0);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-box h2 {
+      margin-bottom: 1rem;
+      color: #f4b400;
+      text-align: center;
+    }
+
+    .contact-box form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      margin-bottom: 1.2rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: none;
+    }
+
+    .contact-box button {
+      padding: 0.8rem 1rem;
+      border: none;
+      background-color: #f4b400;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-box button:hover {
+      background-color: #dca900;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      color: #f4b400;
+      margin: 0 0.6rem;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+      }
+      
+      .nav-center {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .contact-container {
+        padding: 2rem 1rem;
+      }
+      
+      
+      .contact-box {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar - UPDATED -->
+  <nav class="navbar">
+    <div class="nav-left">
+     
+      <div class="logo-text">
+        <div class="name">PRIYANKA RAJPUT</div>
+        <div class="title">Interior Designer</div>
+      </div>
+    </div>
+
+    <ul class="nav-center nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pages.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html" class="active">Contacts</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <a href=" https://x.com/priyankara1a?s=21" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      
+      <a href="https://www.linkedin.com/in/priyanka-rajput-a1a269176/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+   
+    </div>
+  </nav>
+
+  <!-- Contact Form Section -->
+  <section class="contact-container">
+    <div class="contact-box">
+      <h2>Get in Touch</h2>
+      <form action="https://formspree.io/f/xanjraal" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Priyanka Rajput | All Rights Reserved</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/priyanka-rajput-a1a269176/" target="_blank"><i class="fab fa-linkedin"></i></a>
+         <a href=" https://x.com/priyankara1a?s=21" target="_blank" ><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.behance.net/rajputp574" target="_blank"><i class="fab fa-behance"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

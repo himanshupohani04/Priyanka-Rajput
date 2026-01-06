@@ -1,0 +1,500 @@
+* {
+  margin: 100; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+.container {
+  width: 92%;
+  max-width: 1590px;
+  margin: auto;
+}
+
+.section {
+  padding: 50px 0;
+}
+h1,h2,h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+  color: #000;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* ===== NAVBAR STYLES (UPDATED) ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-text .name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.logo-text .title {
+  font-size: 12px;
+  color: #fdb714;
+  font-weight: 500;
+}
+
+.nav-center {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-center li a {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-center li a.active {
+  color: #fdb714;
+  border-bottom: 2px solid #fdb714;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-right a {
+  color: #000;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+  color: #fdb714;
+}
+
+/* ===== EXISTING STYLES BELOW ===== */
+
+.btn {
+  position: relative;
+  padding: 12px 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.btn.yellow {
+  background: linear-gradient(to bottom right, #ffca28, #fbc02d);
+  color: #000;
+  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+}
+
+.btn.black {
+  background: linear-gradient(to bottom right, #000, #111);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at top left, rgba(255, 255, 255, 0.3), transparent 70%);
+  transform: rotate(25deg);
+  z-index: 0;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Section */
+.hero-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.hero-left h1 {
+  font-size: 32px;
+}
+
+.hero-left h2 {
+  font-size: 28px;
+  color: #ffc107;
+  margin: 10px 0;
+}
+
+.hero-right {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  text-align: center;
+}
+
+.hero-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: sticky;
+  z-index: 3;
+  border: 6px solid #fff;
+  margin-top: -42px;
+}
+
+
+
+/* Blobs - REMOVED big-yellow styles */
+.blob {
+  position: absolute;
+  border-radius: 60% 40% 30% 70%;
+  z-index: 1;
+}
+
+/* Removed the .big-yellow class styles */
+
+.small-yellow {
+  background: #ffc107;
+  width: 300px;
+  height: 280px;
+  top: -55px;
+  left: -40px;
+  transform: rotate(-15deg);
+}
+
+/* ✅ Black Blob at Left Margin of Download CV */
+.blob-left-black {
+  position: absolute;
+  left: -190px;
+  top: 210px;
+  width: 140px;
+  height: 130px;
+  background: #000;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transform: rotate(-15deg);
+  z-index: 0;
+  box-shadow: inset -10px -8px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Handwritten font for "Hi" and "There!" */
+.blob.yellow-blob.small-yellow p {
+  font-family: 'Pacifico', cursive;
+  font-size: 48px;
+  color: black;
+  margin: 0;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.blob.yellow-blob.small-yellow p:first-child {
+  margin-bottom: 10px;
+}
+
+.blob.yellow-blob.small-yellow p:nth-child(2) {
+  margin-left: 40px;
+}
+
+/* Services */
+.services-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  /* ⬅️ shift whole row slightly right */
+  margin-left: 192px;
+}
+
+
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 320px;   /* 🔥 keeps all 3 in one line */
+  background: #fff;
+  padding: 25px 30px;
+  text-align: center;
+  border-radius: 12px;
+
+  /* 🔥 stronger, softer shadow */
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.08),
+    0 6px 12px rgba(0, 0, 0, 0.06);
+
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.12),
+    0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+
+.card.highlighted {
+  background: #fff9e6;
+  border: 2px solid #ffc107;
+}
+
+/* Intro Section */
+.intro-flex {
+  display: flex;
+  gap: 40px;
+  align-items: right;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.intro-left,
+.intro-right {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.intro-img {
+  max-width: 280px;
+  position: center;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.intro-text {
+  position: relative;
+  z-index: 2;
+  
+}
+
+.intro-right h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.social-icons-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Skills Section */
+.skills-flex {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skills-left,
+.skills-right {
+  flex: 1;
+  min-width: 300px;
+
+  
+}
+.skills-left {
+  margin-top: -399px;   /* ⬆️ shifts ONLY the left text part up */
+  flex: 7;
+}
+
+
+.skills-left h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.progress label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.bar {
+  background: #e0e0e0;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.bar div {
+  height: 100%;
+  background: #ffc107;
+}
+
+.skills-right {
+  margin-top: 80px;            /* keeps cards lower */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+
+  max-width: 10000px;            /* ⬅️ makes the block wider */
+  margin-left: auto;
+  margin-right: 400px;          /* ⬅️ centers the whole block */
+  
+}
+
+
+
+.skill-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;                 /* fills grid column */
+  min-height: 190px;
+  max-width: 500px ;
+    aspect-ratio: 1 / 1; 
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+/* Modify black blob to hug the left edge */
+.edge-black {
+  left: 0 !important;
+  top: 20px;
+}
+
+.intro-right.with-black-blob {
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Decorative Black Blob with Dots */
+.decor-blob {
+  position: absolute;
+  bottom: -80px;
+  left: -120px;
+  width: 300px;
+  height: 300px;
+  z-index: 0;
+  overflow: visible;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  
+  .nav-center {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-flex,
+  .intro-flex,
+  .skills-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-right {
+    margin-top: 40px;
+  }
+
+  .services-row {
+    gap: 10px;
+  }
+}
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blob.yellow-blob.small-yellow p {
+  animation: slideDownFade 5.2s ease-out forwards;
+  opacity: 0;
+}
+
+/* small delay for second line */
+.blob.yellow-blob.small-yellow p:nth-child(2) {
+  animation-delay: 0.3s;
+}

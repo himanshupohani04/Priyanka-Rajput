@@ -1,0 +1,265 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1,h2,h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+  color: #000;
+  text-rendering: optimizeLegibility;
+}
+
+/* NAVIGATION */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-text .name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.logo-text .title {
+  font-size: 12px;
+  color: #fdb714;
+  font-weight: 500;
+}
+
+.nav-center {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-center li a {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-center li a.active {
+  color: #fdb714;
+  border-bottom: 2px solid #fdb714;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-right a {
+  color: #000;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+  color: #fdb714;
+}
+
+/* HERO SECTION */
+.hero-section {
+  padding: 40px 100px;
+}
+
+.hero-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 450px;
+  border-radius: 10px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.hero-buttons .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.yellow {
+  background-color: #fdb714;
+  color: #fff;
+}
+
+.black {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  display: flex;
+  background-color: #111;
+  color: white;
+  padding: 60px 100px;
+  justify-content: space-between;
+  align-items: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.about-section p {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.about-left {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about-left .btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #fdb714;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.about-right {
+  max-width: 45%;
+}
+
+.about-right img {
+  width: 100px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+
+.about-right ul {
+  list-style: none;
+  line-height: 2;
+  font-size: 16px;
+}
+
+.about-right ul li strong {
+  width: 100px;
+  display: inline-block;
+}
+
+/* SERVICES SECTION */
+.services-section {
+  padding: 80px 100px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+.service-box {
+  background-color: #f9f9f9;
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.service-box i {
+  font-size: 2rem;
+  color: #fdb714;
+  margin-bottom: 15px;
+}
+
+.service-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.service-box p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
