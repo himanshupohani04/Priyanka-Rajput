@@ -504,11 +504,12 @@ h1,h2,h3 {
 ================================ */
 @media (max-width: 768px) {
 
+  /* Prevent horizontal scroll */
   body {
     overflow-x: hidden;
   }
 
-  /* Navbar */
+  /* ---------------- NAVBAR ---------------- */
   .navbar {
     flex-direction: column;
     gap: 12px;
@@ -521,7 +522,7 @@ h1,h2,h3 {
     gap: 15px;
   }
 
-  /* Hero section */
+  /* ---------------- HERO SECTION ---------------- */
   .hero-flex {
     flex-direction: column;
     text-align: center;
@@ -548,11 +549,11 @@ h1,h2,h3 {
     width: 200px;
     height: 200px;
     left: 50%;
-    transform: translateX(-50%) rotate(-10deg);
     top: -40px;
+    transform: translateX(-50%) rotate(-10deg);
   }
 
-  /* Buttons */
+  /* Buttons stack */
   .buttons {
     display: flex;
     flex-direction: column;
@@ -560,35 +561,46 @@ h1,h2,h3 {
     gap: 12px;
   }
 
-  /* Services section */
+  /* ---------------- SERVICES ---------------- */
   .services-row {
-    margin-left: 0;     /* removes desktop offset */
+    margin-left: 0 !important;   /* removes desktop shift */
     flex-direction: column;
     gap: 20px;
   }
 
-  /* Intro section */
+  .card {
+    max-width: 100%;
+  }
+
+  /* ---------------- INTRO SECTION ---------------- */
   .intro-flex {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
+  }
+
+  .intro-right.with-black-blob {
+    padding-left: 0;
   }
 
   .edge-black {
-    display: none;  /* hide decorative blob on mobile */
+    display: none; /* hide decorative black blob on mobile */
   }
 
-  /* Skills section */
+  /* ---------------- SKILLS SECTION ---------------- */
   .skills-flex {
     flex-direction: column;
   }
 
   .skills-left {
-    margin-top: 0;   /* removes -399px */
+    margin-top: 0 !important;    /* FIXES MAIN OVERLAP */
     text-align: center;
   }
 
   .skills-right {
-    margin: 30px auto 0;
+    margin-top: 30px;
+    margin-right: 0 !important;  /* FIXES SIDE OVERLAP */
+    margin-left: 0 !important;
     grid-template-columns: 1fr;
     max-width: 100%;
   }
