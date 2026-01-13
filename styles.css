@@ -578,6 +578,11 @@ h1,h2,h3 {
     text-align: center;
     gap: 30px;
   }
+  .intro.section {
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+  }
 
   .intro-right.with-black-blob {
     padding-left: 0;
@@ -590,6 +595,11 @@ h1,h2,h3 {
   /* ---------------- SKILLS SECTION ---------------- */
   .skills-flex {
     flex-direction: column;
+  }
+  .skills.section {
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
   }
 
   .skills-left {
@@ -609,4 +619,8 @@ h1,h2,h3 {
     max-width: 100%;
     aspect-ratio: auto;
   }
+  .progress {
+    margin-bottom: 25px;
+  }
+
 }
