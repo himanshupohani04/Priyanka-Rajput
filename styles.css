@@ -498,3 +498,103 @@ h1,h2,h3 {
 .blob.yellow-blob.small-yellow p:nth-child(2) {
   animation-delay: 0.3s;
 }
+/* ===============================
+   MOBILE RESPONSIVE FIX
+   (HTML UNCHANGED)
+================================ */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px;
+  }
+
+  .nav-center {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* Hero section */
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    order: 2;
+  }
+
+  .hero-right {
+    order: 1;
+    margin-bottom: 30px;
+  }
+
+  .hero-img {
+    width: 220px;
+    height: 220px;
+    margin-top: 0;
+    position: relative;
+  }
+
+  /* Yellow "Hi There" blob */
+  .small-yellow {
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-10deg);
+    top: -40px;
+  }
+
+  /* Buttons */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Services section */
+  .services-row {
+    margin-left: 0;     /* removes desktop offset */
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Intro section */
+  .intro-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .edge-black {
+    display: none;  /* hide decorative blob on mobile */
+  }
+
+  /* Skills section */
+  .skills-flex {
+    flex-direction: column;
+  }
+
+  .skills-left {
+    margin-top: 0;   /* removes -399px */
+    text-align: center;
+  }
+
+  .skills-right {
+    margin: 30px auto 0;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .skill-card {
+    max-width: 100%;
+    aspect-ratio: auto;
+  }
+}
