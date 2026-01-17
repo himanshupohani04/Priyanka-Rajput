@@ -358,7 +358,7 @@ h1,h2,h3 {
   
 }
 .skills-left {
-  margin-top: -399px;   /* ⬆️ shifts ONLY the left text part up */
+  margin-top: -402px;   /* ⬆️ shifts ONLY the left text part up */
   flex: 0.5 ;
 }
 
@@ -498,3 +498,4 @@ h1,h2,h3 {
 .blob.yellow-blob.small-yellow p:nth-child(2) {
   animation-delay: 0.3s;
 }
+
