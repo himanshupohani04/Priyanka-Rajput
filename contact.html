@@ -181,6 +181,7 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE FIX FOR MOBILE ===== */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -195,13 +196,21 @@ footer {
   }
   
   .contact-container {
-    padding: 2rem 1rem; /* reduced padding on mobile */
+    /* Remove vertical centering */
+    display: block;
+    padding: 2rem 1rem; /* reduced padding */
   }
   
   .contact-box {
-    padding: 2rem; /* reduce space inside form */
+    padding: 2rem; /* reduce form box padding */
+    margin: 0 auto; /* center horizontally */
+  }
+  
+  footer {
+    padding: 2rem 1rem;
   }
 }
+
 </style>
 </head>
 <body>
