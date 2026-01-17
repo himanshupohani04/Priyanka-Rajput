@@ -5,10 +5,18 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: sans-serif;
   background: #fff;
   color: #111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* CONTAINER */
@@ -17,13 +25,14 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 1.15;
   letter-spacing: -0.3px;
-  color:white;
+  color: white;
   text-rendering: optimizeLegibility;
 }
 
@@ -92,21 +101,22 @@ h1 {
 /* PROJECT GRID */
 .projects {
   padding: 60px 0;
+  flex: 1;
 }
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 1 2 / 3 4 */
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
-/* SQUARE PROJECT CARD */
+/* PROJECT CARD */
 .portfolio-item {
   background: #f9f9f9;
   border-radius: 12px;
   padding: 15px;
-  aspect-ratio: 1 / 1;        /* SQUARE */
-  overflow-y: auto;          /* scroll text */
+  aspect-ratio: 1 / 1;
+  overflow-y: auto;
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
   transition: transform 0.3s;
 }
@@ -118,13 +128,12 @@ h1 {
 /* IMAGE */
 .portfolio-item img.project1-img {
   width: 100%;
-  height: 40%;              /* same height as other images */
-  object-fit: fill;      /* ensures full image is visible */
-  background-color: #fff;   /* fills empty space */
-  padding: 10px;            /* subtle breathing room */
+  height: 40%;
+  object-fit: cover;
+  background-color: #fff;
+  padding: 10px;
   border-radius: 8px;
 }
-
 
 /* TEXT */
 .portfolio-item p {
@@ -138,6 +147,7 @@ h1 {
   color: #fff;
   padding: 60px 0;
   text-align: center;
+  margin-top: auto;
 }
 
 .footer-cta .social-nav {
@@ -150,11 +160,24 @@ h1 {
   margin: 0 10px;
 }
 
-/* MOBILE */
+/* ===================== */
+/* MOBILE OPTIMIZATION */
+/* ===================== */
 @media (max-width: 768px) {
+
   .navbar {
     flex-direction: column;
     gap: 15px;
+    padding: 15px;
+  }
+
+  .nav-center {
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 34px;
+    text-align: center;
   }
 
   .portfolio-grid {
@@ -163,5 +186,20 @@ h1 {
 
   .portfolio-item {
     aspect-ratio: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .portfolio-item img.project1-img {
+    height: auto;
+    padding: 0;
+  }
+
+  .projects {
+    padding: 40px 0;
+  }
+
+  .footer-cta {
+    padding: 40px 20px;
   }
 }
