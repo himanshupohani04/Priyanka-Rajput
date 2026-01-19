@@ -599,40 +599,39 @@ h1,h2,h3 {
 
   /* -------- HERO SECTION FIX -------- */
   .hero-section {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-  }
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 10px; /* reduces top empty space */
+}
 
   .hero-yellow-shape,
-  .yellow-bg,
-  .blob,
-  .shape {
-    position: relative !important;
-    width: 260px;
-    height: 260px;
-    margin: 0 auto 20px;
-    transform: none !important;
-    z-index: 1;
-  }
-
+.yellow-bg,
+.blob,
+.shape {
+  position: relative !important;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+  z-index: 1;
+}
   .hero-text,
-  .hero-content,
-  .hero-left {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-  }
+.hero-content,
+.hero-left {
+  position: relative;
+  z-index: 3;
+  margin-bottom: -40px; /* pulls image upward */
+}
 
-  .hero-img,
-  .hero-image,
-  .profile-img {
-    position: relative;
-    z-index: 2;
-    max-width: 260px;
-    margin: 0 auto;
-    display: block;
-  }
+ .hero-img,
+.hero-image,
+.profile-img {
+  position: relative;
+  z-index: 2;
+  max-width: 240px;
+  margin: -120px auto 0; /* THIS is the key line */
+  display: block;
+}
 
   /* -------- FLEX STACKING -------- */
   .hero-flex,
