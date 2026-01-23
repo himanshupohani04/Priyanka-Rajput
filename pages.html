@@ -37,6 +37,10 @@
     <a href="https://www.linkedin.com/in/priyanka-rajput-a1a269176/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
  
   </div>
+  <div class="menu-toggle" id="menuToggle">
+  <i class="fa fa-bars"></i>
+</div>
+
 </nav>
 
 <section class="hero-section">
@@ -106,7 +110,14 @@ I look at the bigger picture connecting touch points, processes, and experiences
     </div>
   </div>
 </section>
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.querySelector(".nav-center");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
 
 </body>
 </html>
-
