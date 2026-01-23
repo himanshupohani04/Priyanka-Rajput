@@ -284,50 +284,74 @@ h1,h2,h3 {
 
 /* Tablets & Mobile */
 @media (max-width: 992px) {
+
+  /* Prevent content overlap */
   body {
-    padding-top: 70px;
+    padding-top: 190px;
   }
 
   /* NAVBAR */
   .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 15px 50px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-
-  .nav-center {
     position: fixed;
-    top: 70px;
+    top: 0;
     left: 0;
     width: 100%;
-    background: #fff;
-    flex-direction: column;
-    gap: 20px;
-    padding: 25px 0;
-    display: none;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  }
+    z-index: 1000;
 
-  .nav-center.show {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    padding: 25px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
 
+  /* LOGO CENTER */
+  .nav-left {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-text .name {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .logo-text .title {
+    font-size: 14px;
+  }
+
+  /* NAV LINKS — ALWAYS VISIBLE */
+  .nav-center {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    padding: 5px 0;
+    box-shadow: none;
+  }
+
+  .nav-center li a {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  /* SOCIAL ICONS */
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 18px;
+  }
+
+  /* REMOVE HAMBURGER COMPLETELY */
   .menu-toggle {
-    display: block;
+    display: none;
   }
 
-  /* HERO SECTION */
+  /* HERO */
   .hero-section {
     padding: 40px 20px;
   }
@@ -337,20 +361,11 @@ h1,h2,h3 {
     text-align: center;
   }
 
-  .hero-image img {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .hero-text {
-    max-width: 100%;
-  }
-
   .hero-text h1 {
     font-size: 2rem;
   }
 
-  /* ABOUT SECTION */
+  /* ABOUT */
   .about-section {
     padding: 40px 20px;
   }
