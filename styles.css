@@ -618,15 +618,16 @@ h1,h2,h3 {
   }
 
   .hero-yellow-shape,
-  .yellow-bg,
-  .blob,
-  .shape {
-    position: relative !important;
-    width: 260px;
-    height: 260px;
-    margin: 0 auto;
-    z-index: 1;
-  }
+.yellow-bg,
+.blob,
+.shape {
+  position: relative !important;
+  width: 260px;
+  height: 260px;
+  margin: 40px auto 0;  /* ⬅️ was 0 auto */
+  z-index: 1;
+}
+
 
   .hero-text,
   .hero-content,
