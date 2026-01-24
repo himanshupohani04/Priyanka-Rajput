@@ -496,7 +496,7 @@ h1,h2,h3 {
 
 /* small delay for second line */
 .blob.yellow-blob.small-yellow p:nth-child(2) {
-  animation-delay: 0.3s;
+  animation-delay: 2s;
 }
 /* ================= FULL WIDTH BANNER SLIDER ================= */
 
@@ -511,7 +511,7 @@ h1,h2,h3 {
 .slider-track {
   display: flex;
   height: 100%;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .banner-slide {
