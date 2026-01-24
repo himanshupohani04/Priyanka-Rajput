@@ -20,7 +20,7 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   background-color: #fffbea;
   color: #222;
 }
@@ -33,6 +33,11 @@ html, body {
   padding: 15px 50px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;      /* sticks at top */
+  top: 0;                /* top edge */
+  left: 0;
+  width: 100%;
+  z-index: 9999; 
 }
 
 .nav-left {
@@ -187,6 +192,7 @@ footer {
     flex-direction: column;
     padding: 15px 20px;
     gap: 15px;
+    
   }
   
   .nav-center {
