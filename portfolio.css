@@ -7,7 +7,7 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 body {
@@ -39,6 +39,12 @@ h1 {
 /* NAVBAR */
 .navbar {
   display: flex;
+  position: sticky;   /* stays at top while scrolling */
+  top: 0;             /* stick to top */
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
