@@ -614,19 +614,21 @@ h1,h2,h3 {
     position: relative;
     overflow: hidden;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 50px;
   }
 
-  .hero-yellow-shape,
+.hero-yellow-shape,
 .yellow-bg,
 .blob,
 .shape {
   position: relative !important;
   width: 260px;
   height: 260px;
-  margin: 40px auto 0;  /* ⬅️ was 0 auto */
+  margin: 90px auto 0;   /* ⬅️ increased */
   z-index: 1;
+  margin-top: 59px
 }
+
 
 
   .hero-text,
@@ -675,6 +677,6 @@ h1,h2,h3 {
 
   section,
   .container {
-    overflow-x: hidden;
+    overflow-x: visible;
   }
 }
