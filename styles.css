@@ -33,6 +33,11 @@ h1,h2,h3 {
 /* ===== NAVBAR STYLES (UPDATED) ===== */
 .navbar {
   display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
