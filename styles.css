@@ -573,6 +573,7 @@ h1,h2,h3 {
 
   body {
     overflow-x: hidden;
+    padding-bottom: 0 !important;
   }
 
   .navbar {
@@ -622,19 +623,16 @@ h1,h2,h3 {
     padding-top: 50px;
   }
 
-.hero-yellow-shape,
-.yellow-bg,
-.blob,
-.shape {
-  position: relative !important;
-  width: 260px;
-  height: 260px;
-  margin: 90px auto 0;   /* ⬅️ increased */
-  z-index: 1;
-  margin-top: 59px
-}
-
-
+  .hero-yellow-shape,
+  .yellow-bg,
+  .blob,
+  .shape {
+    position: relative !important;
+    width: 260px;
+    height: 260px;
+    margin: 59px auto 0;
+    z-index: 1;
+  }
 
   .hero-text,
   .hero-content,
@@ -644,15 +642,20 @@ h1,h2,h3 {
     margin-bottom: -30px;
   }
 
+  /* ✅ ONLY CHANGE: IMAGE SHIFTED UP MORE */
   .hero-img,
-  .hero-image,
-  .profile-img {
-    position: relative;
-    z-index: 2;
-    max-width: 240px;
-    margin: -120px auto 0;
-    display: block;
-  }
+.hero-image,
+.profile-img {
+  position: relative;
+  z-index: 5;
+  max-width: 240px;
+  display: block;
+
+  margin-top: -445px;   /* ⬅️ BIGGER pull-up */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
   .hero-flex,
   .intro-flex,
@@ -684,4 +687,17 @@ h1,h2,h3 {
   .container {
     overflow-x: visible;
   }
+   .services.section {
+    margin-bottom: -350px;
+  }
+  
+  section:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .banner-slider {
+    margin-bottom: -80px;   /* pulls page content up */
+  }
+
 }
