@@ -1,5 +1,5 @@
 * {
-  margin: 100; 
+  margin: 10; 
   padding: 0;
   box-sizing: border-box;
 }
@@ -8,6 +8,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   background: #fff;
+  overflow-x: hidden;
 }
 
 .container {
@@ -154,6 +155,10 @@ h1,h2,h3 {
 }
 
 /* Hero Section */
+.hero.section {
+  position: relative;
+}
+
 .hero-flex {
   display: flex;
   justify-content: space-between;
@@ -163,9 +168,27 @@ h1,h2,h3 {
 
 .hero-left {
   flex: 1;
-  min-width: 300px;
-  position: relative;
+  min-width: 400px;
+  
+   position: relative;
+   text-align: left;
+   margin-left: -10px;
+
+  
 }
+@media (min-width: 1024px) {
+  .hero-left {
+  flex: 1;
+  min-width: 400px;
+  
+   position: relative;
+   text-align: left;
+   margin-left: -250px;
+
+  
+}
+}
+
 
 .hero-left h1 {
   font-size: 32px;
@@ -181,18 +204,30 @@ h1,h2,h3 {
   flex: 1;
   min-width: 300px;
   position: relative;
-  text-align: center;
+  text-align: right;
+  
 }
+@media (min-width: 769px) {
+  .hero.section .container {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;   /* keeps it aligned with navbar */
+    padding-right: 0;
+  }
+}
+
 
 .hero-img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  position: sticky;
+  position: absolute;
   z-index: 3;
   border: 6px solid #fff;
-  margin-top: 45px;
+  margin-top: -65px;
+  left: 1100px;
+
 }
 
 
@@ -210,8 +245,8 @@ h1,h2,h3 {
   background: #ffc107;
   width: 300px;
   height: 280px;
-  top: -55px;
-  left: -40px;
+  top: -175px; 
+  left: 1050px;
   transform: rotate(-15deg);
 }
 
@@ -255,7 +290,8 @@ h1,h2,h3 {
   flex-wrap: wrap;
 
   /* ⬅️ shift whole row slightly right */
-  margin-left: 192px;
+  margin-left: 102px;
+   margin-top: 40px;
 }
 
 
@@ -565,12 +601,8 @@ h1,h2,h3 {
     padding: 8px 12px;
   }
 }
-/* ================= SAFE MOBILE FIX (DO NOT TOUCH ABOVE CODE) ================= */
-/* =====================================
-   FINAL MOBILE FIXES (ADD AT VERY END)
-   ===================================== */
+/* ================= MOBILE STYLES ================= */
 @media (max-width: 768px) {
-
   body {
     overflow-x: hidden;
     padding-bottom: 0 !important;
@@ -582,7 +614,6 @@ h1,h2,h3 {
     left: 0;
     width: 100%;
     z-index: 999;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -616,88 +647,217 @@ h1,h2,h3 {
     margin-top: 6px;
   }
 
-  .hero-section {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    padding-top: 50px;
+  /* ===== MOBILE HERO REORDERING ===== */
+  .hero.section {
+    padding-top: 60px;
   }
-
-  .hero-yellow-shape,
-  .yellow-bg,
-  .blob,
-  .shape {
-    position: relative !important;
-    width: 260px;
-    height: 260px;
-    margin: 59px auto 0;
-    z-index: 1;
-  }
-
-  .hero-text,
-  .hero-content,
-  .hero-left {
-    position: relative;
-    z-index: 3;
-    margin-bottom: -30px;
-  }
-
-  /* ✅ ONLY CHANGE: IMAGE SHIFTED UP MORE */
-  .hero-img,
-.hero-image,
-.profile-img {
-  position: relative;
-  z-index: 5;
-  max-width: 240px;
-  display: block;
-
-  margin-top: -445px;   /* ⬅️ BIGGER pull-up */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-  .hero-flex,
-  .intro-flex,
-  .skills-flex {
+  
+  .hero-flex {
     flex-direction: column;
     align-items: center;
   }
-
+  
+  .hero-left {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+  
+  .hero .intro.section {
+    order: 1;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  /* Adjust blob for mobile */
+  .blob.yellow-blob.small-yellow {
+    position: relative;
+    width: 280px;
+    height: 270px;
+    margin: 0 auto;
+    left: 0;
+    top: 75px;
+    transform: rotate(-15deg);
+  }
+  
+  /* Adjust photo for mobile */
+  .hero-img {
+     position: relative;
+    left: 20px;          /* ✅ resets desktop left:1100px */
+    top: 55px;
+    width: 280px;
+    height: 280px;
+    margin: -120px auto 0;
+    display: block;
+    z-index: 5; 
+  }
+  
+  /* Adjust text for mobile */
+  .hero-left h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+  
+  .hero-left p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Mobile buttons */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    width: 200px;
+  }
+  
+  /* Services section mobile */
+  .services.section {
+    margin-bottom: 60px;
+  }
+  
   .services-row {
     margin-left: 0;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
-
+  
+  .card {
+    max-width: 90%;
+    min-width: unset;
+  }
+  
+  /* Intro section mobile */
+  .intro.section {
+    margin-bottom: 60px;
+  }
+  
+  .intro-flex {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .intro-right {
+    text-align: center;
+  }
+  
+  .social-icons-wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Skills section mobile - FIXED OVERLAP */
+  .skills.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .skills-flex {
+    flex-direction: column;
+    min-height: auto;
+    gap: 40px;
+  }
+  
   .skills-left {
-    margin-top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    text-align: center;
+    box-shadow: none;
+    background: transparent;
   }
-
+  
+  .skills-right {
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    max-width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  /* Banner slider mobile */
   .banner-slider {
     height: 300px;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
-
-  img,
-  svg {
+  
+  .banner-nav {
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+  
+  /* General image fixes */
+  img, svg {
     max-width: 100%;
     height: auto;
   }
-
-  section,
-  .container {
+  
+  section, .container {
     overflow-x: visible;
   }
-   .services.section {
-    margin-bottom: -350px;
-  }
   
-  section:last-of-type {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+  /* Add space between sections */
+  .section + .section {
+    margin-top: 20px;
   }
-
-  .banner-slider {
-    margin-bottom: -80px;   /* pulls page content up */
-  }
-
 }
+
+/* ===== ADDITIONAL OVERLAP PREVENTION ===== */
+section {
+  position: relative;
+  z-index: 5;
+}
+
+.section + .section {
+  clear: both;
+}
+
+/* Ensure content flows properly */
+.container {
+  position: relative;
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 1.5px 0;   /* ⬇️ reduced from 50px */
+  }
+}
+@media (max-width: 768px) {
+  .services.section,
+  .intro.section,
+  .skills.section {
+    margin-bottom: 30px;   /* ⬇️ was 60px */
+  }
+}
+@media (max-width: 768px) {
+  .services-row {
+    width: 100%;
+    align-items: center;     /* centers cards */
+  }
+
+  .card {
+    max-width: 88%;          /* 🔥 slightly smaller width */
+    min-height: 100px;       /* equal height */
+    margin: 0 auto;          /* 🔥 centers each card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
+
+
