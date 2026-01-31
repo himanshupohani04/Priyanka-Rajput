@@ -846,7 +846,7 @@ section {
   .services-row {
     width: 100%;
     align-items: center;     /* centers cards */
-    left: -1px;
+    left: 11px;
   }
 
   .card {
