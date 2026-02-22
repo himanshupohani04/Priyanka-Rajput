@@ -2,6 +2,7 @@
   margin: 10; 
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
 body {
@@ -9,6 +10,12 @@ body {
   color: #333;
   background: #fff;
   overflow-x: hidden;
+  display: flex;
+  min-height: 100vh;  
+  flex-direction: column;
+  
+  
+
 }
 
 .container {
@@ -28,6 +35,9 @@ h1,h2,h3 {
   letter-spacing: -0.3px;
   color: #000;
   text-rendering: optimizeLegibility;
+}
+.main-content {
+  flex: 1; /* This pushes footer to bottom */
 }
 
 
@@ -858,7 +868,44 @@ section {
     justify-content: center;
   }
 }
+/* ===== PAGE LAYOUT (Required to keep footer at bottom) ===== */
+html, body{
+  height:100%;
+  margin:0;
+}
 
+body{
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
 
+/* main page content expands */
+.main-content{
+  flex:1;
+}
 
+.footer-cta {
+  background: #000;
+  color: #fff;
+  padding: 40px 0;        /* slightly reduced padding */
+  text-align: center;
+  margin-top: auto;       /* keeps footer at bottom */
+  flex-shrink: 0; 
+  width: 100%;            /* ensure full width */
+}
 
+.footer-cta .social-nav {
+  margin-top: 15px;
+}
+
+.footer-cta .social-nav a {
+  color: #f4b400;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-cta p {
+  margin: 0 0 10px 0;     /* remove extra bottom margin */
+}
